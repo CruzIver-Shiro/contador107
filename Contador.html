@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+
+    <style>
+        *{
+            margin:0;
+            padding:20px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: wheat;
+            text-align: center;
+            margin:0px;
+            background-image: url("https://www.aulacreactiva.com/wp-content/uploads/2020/09/IMG-1-diseno-web.jpg")
+        }
+        .contador{
+            margin: 0 170px;
+            padding: 10px auto;
+        }
+        .title{
+            font-size: 85px;
+            margin-bottom: 20px;
+            color:black;
+        }
+        .text{
+            color:#fdbb2d;
+            font-size:50px;
+            margin-bottom:10px;
+        }
+        .Titulo{
+            border-radius: 30px;
+             font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            color:blue;
+            background: linear-gradient(45deg, pink,violet,purple,blue,black);
+        }
+        .nombre{
+            
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            color:rgb(109, 14, 30);
+            background: linear-gradient(45deg,  #fdbb2d, #b21f1f);
+            border-radius: 30px;
+        }
+        .incrementar{
+            font-size: 2.8rem;
+            border-radius: 10px;
+        }
+        .reset{
+            font-size: 2.8rem;
+            border-radius: 10px;
+        }
+        .disminuir{
+            font-size: 2.8rem;
+            border-radius: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h1 class="Titulo">Contador JAVASCRIPT</h1>
+    
+    <h2 class="text">0</h2>
+    <button class="incrementar">+</button>
+    <button class="reset">Reset</button>
+    <button class="disminuir">-</button>
+    <h1></h1>
+    <h2 class="nombre">Cruz Quenaya Iver</h2>
+
+    <script>
+        let incrementar=document.querySelector(".incrementar");
+        let disminuir=document.querySelector(".disminuir");
+        let reset=document.querySelector(".reset");
+        let text=document.querySelector(".text");
+        let contador=0;
+
+        incrementar.addEventListener('click',()=>{
+            contador=contador+2;
+            text.textContent=contador;
+        });
+
+        disminuir.addEventListener('click',()=>{
+            contador=contador-2;
+            text.textContent=contador;
+        });
+        reset.addEventListener('click',()=>{
+            contador=0;
+            text.textContent=contador;
+        });
+
+
+    </script>
+</body>
+</html>
